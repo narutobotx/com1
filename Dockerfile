@@ -1,15 +1,9 @@
 FROM python:3.10-slim-buster
-
-WORKDIR /usr/src/app
-RUN chmod 777 /usr/src/app
-
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install git wget pv jq python3-dev mediainfo gcc libsm6 libxext6 libfontconfig1 libxrender1 libgl1-mesa-glx -y
-
-COPY --from=mwader/static-ffmpeg:6.1 /ffmpeg /bin/ffmpeg
-COPY --from=mwader/static-ffmpeg:6.1 /ffprobe /bin/ffprobe
-
+#FROM python:3.12-slim-buster
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ="Asia/Kolkata"
+RUN apt -qq update && apt -qq install -y ffmpeg mediainfo build-essential
 COPY . .
-RUN pip3 install --no-cache-dir -r requirements.txt
-
+RUN python3 -m pip install --upgrade pip 
+RUN pip3 install -r requirements.txt
 CMD ["bash","run.sh"]
