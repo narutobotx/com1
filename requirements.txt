@@ -23,6 +23,7 @@ lk21
 lxml
 httpx
 urllib3<2
+exrex
 
 # Google Drive
 google-api-core
