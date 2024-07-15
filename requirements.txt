@@ -22,6 +22,7 @@ cfscrape
 lk21
 lxml
 httpx
+urllib3<2
 
 # Google Drive
 google-api-core
