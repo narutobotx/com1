@@ -1,5 +1,4 @@
-FROM python:3.10-slim-buster
-#FROM python:3.12-slim-buster
+FROM python:3.12-slim-buster
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ="Asia/Kolkata"
 RUN apt -qq update && apt -qq install -y ffmpeg mediainfo build-essential
