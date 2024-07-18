@@ -9,7 +9,13 @@ from time import time
 from psutil import (boot_time, cpu_count, cpu_percent, disk_usage,
                     net_io_counters, swap_memory, virtual_memory)
 from pyrogram import Client, filters
-from pyrogram.types import Message
+from pyrogram.types import (
+    InlineKeyboardMarkup,
+    InlineKeyboardButton,
+    Message,
+    ForceReply,
+    ChatJoinRequest
+)
 
 from .. import botStartTime, download_dir, encode_dir
 from ..utils.database.access_db import db
