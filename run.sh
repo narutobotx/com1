@@ -1,1 +1,2 @@
-python3 update.py && python3 -m BindhuEncoder
+python3 update.py
+python3 -m BindhuEncoder
