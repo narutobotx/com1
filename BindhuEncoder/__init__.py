@@ -9,8 +9,8 @@ from pyrogram import Client
 
 botStartTime = time.time()
 
-if os.path.exists('BindhuEncoder/config.env'):
-    load_dotenv('BindhuEncoder/config.env')
+if os.path.exists('config.env'):
+    load_dotenv('config.env')
 
 # Variables
 
