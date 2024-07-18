@@ -32,7 +32,7 @@ async def start_message(app, message):
         return
     await AddUserToDatabase(app, message)
     text = f"Hi {message.from_user.mention()}<a href='https://graph.org/file/49ab250d34f17b14ae559.jpg'>!</a> I'm BindhuEncoder Bot which will do magic with your file."
-    await message.reply(text=text, reply_markup=start_but)
+    await message.reply(text=text, reply_markup=InlineKeyboardMarkup(btn))
 
 
 @Client.on_message(filters.command('help'))
