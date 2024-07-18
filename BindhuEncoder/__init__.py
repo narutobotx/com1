@@ -87,7 +87,7 @@ logging.basicConfig(
     datefmt="%d-%b-%y %H:%M:%S",
     handlers=[
         RotatingFileHandler(
-            'BindhuEncoder/utils/extras/logs.txt',
+            'utils/extras/logs.txt',
             backupCount=20
         ),
         logging.StreamHandler()
